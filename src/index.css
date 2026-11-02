@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-headline: 'Montserrat', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+  }
+
+  body {
+    font-family: var(--font-serif);
+    background-color: #0b0a09;
+    color: #e8e2d8;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-headline {
+    font-family: var(--font-headline);
+  }
+}
+
+/* Custom font utility helpers as required */
+.font-headline {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.font-garamond, .font-serif {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* Soft Warm Gold Shimmer & Lighting Animations */
+@keyframes warmGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: blur(40px);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.08);
+    filter: blur(50px);
+  }
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes sparkleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-8px) rotate(15deg);
+    opacity: 0.9;
+  }
+}
+
+.animate-warm-glow {
+  animation: warmGlow 8s ease-in-out infinite;
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFF1B0 0%, #D4AF37 40%, #AA7C11 75%, #F3E5AB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-shimmer-btn {
+  background: linear-gradient(90deg, #b8860b 0%, #ffd700 25%, #d4af37 50%, #ffd700 75%, #b8860b 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 4s linear infinite;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #d4af37, #f3e5ab, #aa7c11) 1;
+}
+
+/* Custom Scrollbar for Luxury Aesthetics */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0a09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a241e;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Smooth Image Gallery Transitions */
+.gallery-transition-enter {
+  opacity: 0;
+  transform: scale(0.97) translateY(8px);
+}
+
+.gallery-transition-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+/* Ambient Warm Lighting Overlay */
+.warm-ambient-mask {
+  background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.15) 0%, rgba(11, 10, 9, 0.85) 70%);
+}

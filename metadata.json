@@ -1,0 +1,6 @@
+{
+  "name": "AURA MAISON | High Fine Jewelry Atelier",
+  "description": "Exquisite 18K solid gold, rare diamonds, emeralds, and South Sea pearls. Bespoke high jewelry customizer, virtual try-on, and personal AI stylist.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
